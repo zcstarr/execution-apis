@@ -48,8 +48,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
- deploy-spec:
+
+  deploy-spec:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -64,4 +64,4 @@ jobs:
           git add -f openrpc.json
           git add -f refs-openrpc.json
           git commit -m "assemble openrpc.json"
-          git push -fu origin assembled-spec        
+          git push -fu origin assembled-spec
