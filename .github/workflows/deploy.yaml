@@ -60,6 +60,8 @@ jobs:
   deploy-spec:
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Download openrpc spec
